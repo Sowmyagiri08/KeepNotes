@@ -53,7 +53,6 @@ public class UserAuthenticationServiceTest {
 
 
     @Test(expected = UserAlreadyExistsException.class)
-    @Ignore
     public void testSaveUserFailure() throws UserAlreadyExistsException {
 
         Mockito.when(autheticationRepository.findById("Jhon123")).thenReturn(optional);

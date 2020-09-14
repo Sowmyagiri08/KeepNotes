@@ -1,12 +1,16 @@
 package com.stackroute.keepnote.config;
 
+import org.springframework.context.annotation.Configuration;
 import springfox.documentation.spring.web.plugins.Docket;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /*As in this class we are implementing Swagger So annotate the class with @Configuration and 
  * @EnableSwagger2
  * 
  */
 
+@EnableSwagger2
+@Configuration
 public class SwaggerConfig {
 
 	/*
@@ -17,6 +21,8 @@ public class SwaggerConfig {
     public Docket productApi() {
        return null;
     }
+
+
 
 	
 }

@@ -6,6 +6,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.stackroute.keepnote.jwtfilter.JwtFilter;
@@ -19,6 +20,8 @@ import com.stackroute.keepnote.jwtfilter.JwtFilter;
  */
 
 @SpringBootApplication
+@EnableAspectJAutoProxy
+@EnableDiscoveryClient
 public class UserServiceApplication {
 
 	/*
@@ -28,7 +31,10 @@ public class UserServiceApplication {
 	 */
 	@Bean
 	public FilterRegistrationBean jwtFilter() {
-		return null;
+		FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+		filterRegistrationBean.setFilter(new JwtFilter());
+		filterRegistrationBean.addUrlPatterns("/api/v1/*");
+		return filterRegistrationBean;
 	}
 
 	/*
@@ -38,8 +44,15 @@ public class UserServiceApplication {
 	
 	@Bean
     public WebMvcConfigurer corsConfigurer() {
-        return null;
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/api/v1/category/*").allowedOrigins("http://localhost:9400");
+			}
+		};
     }
+
+
 
 	/*
 	 * 

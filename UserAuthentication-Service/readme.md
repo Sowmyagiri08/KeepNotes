@@ -35,7 +35,7 @@ The folders and files you see in this repositories, is how it is expected to be 
 	├── com.stackroute.keepnote.config             
     |       └── SwaggerConfig.java                                      // This class implements the Swagger configuration for documenting the APIs.
 	├── com.stackroute.keepnote.controller
-	|		└── UserAuthenticationController.java                       // This class is responsible for processing all requests related to UserAuthentication and builds an appropriate model and passes it to the view for rendering.
+	|		└── UserAuthenticationaController.java                       // This class is responsible for processing all requests related to UserAuthentication and builds an appropriate model and passes it to the view for rendering.
 	├── com.stackroute.keepnote.jwt             
     |       └── SecurityTokenGenerator.java                             // This class implements the logic to generate JWT token.
 	├── com.stackroute.keepnote.model

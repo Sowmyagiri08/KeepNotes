@@ -3,6 +3,12 @@ package com.stackroute.keepnote.service;
 import com.stackroute.keepnote.exception.UserAlreadyExistsException;
 import com.stackroute.keepnote.exception.UserNotFoundException;
 import com.stackroute.keepnote.model.User;
+import com.stackroute.keepnote.repository.UserAutheticationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Date;
+import java.util.Optional;
 
 /*
 * Service classes are used here to implement additional business logic/validation 
@@ -14,7 +20,7 @@ import com.stackroute.keepnote.model.User;
 * future.
 * */
 
-
+@Service
 
 public class UserAuthenticationServiceImpl implements UserAuthenticationService {
 
@@ -24,6 +30,12 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
 	 * object using the new keyword.
 	 */
 
+	private UserAutheticationRepository userAutheticationRepository;
+
+	@Autowired
+	public UserAuthenticationServiceImpl(UserAutheticationRepository userAutheticationRepository) {
+		this.userAutheticationRepository = userAutheticationRepository;
+	}
 
 
 
@@ -35,9 +47,12 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
 	 */
     @Override
     public User findByUserIdAndPassword(String userId, String password) throws UserNotFoundException {
-
-      
-        return null;
+		User foundUser = userAutheticationRepository.findByUserIdAndUserPassword(userId,password);
+		if(foundUser!=null){
+			return foundUser;
+		} else {
+			throw new UserNotFoundException("User not found");
+		}
     }
 
 
@@ -50,7 +65,13 @@ public class UserAuthenticationServiceImpl implements UserAuthenticationService 
 
     @Override
     public boolean saveUser(User user) throws UserAlreadyExistsException {
-       
-        return false;
+		Optional<User> optionalUser = userAutheticationRepository.findById(user.getUserId());
+		if(optionalUser.isPresent()){
+			throw new UserAlreadyExistsException("User already exists");
+		} else {
+			user.setUserAddedDate(new Date());
+			userAutheticationRepository.save(user);
+			return true;
+		}
     }
 }

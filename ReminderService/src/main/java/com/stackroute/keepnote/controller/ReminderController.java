@@ -26,8 +26,6 @@ import java.util.List;
  */
 @RestController
 @CrossOrigin
-@EnableFeignClients
-@RibbonClient(name = "ribbon")
 @RequestMapping("api/v1")
 public class ReminderController {
 

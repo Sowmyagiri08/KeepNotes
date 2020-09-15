@@ -6,6 +6,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -36,21 +37,15 @@ public class NoteServiceApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/api/v1/*").allowedOrigins("http://localhost:4200/dashboard");
+				registry.addMapping("/api/v1/*").allowedOrigins("http://localhost:4200");
 			}
 		};
 	}
 
 
 
-	@Bean
-	public FilterRegistrationBean jwtFilter() {
 
-		FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
-		filterRegistrationBean.setFilter(new JwtFilter());
-		filterRegistrationBean.addUrlPatterns("/api/v1/*");
-		return filterRegistrationBean;
-	}
+
 
 	/*
 	 * Define the bean for WebMvcConfigurer. Create a new WebMvcConfigurerAdapter object 

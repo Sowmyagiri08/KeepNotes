@@ -25,9 +25,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @CrossOrigin
-@EnableFeignClients
 @RequestMapping("api/v1")
-@RibbonClient(name = "category")
 public class CategoryController {
 
 	/*

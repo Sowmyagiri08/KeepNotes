@@ -29,13 +29,6 @@ public class UserServiceApplication {
 	 * object and use setFilter() method to set new instance of JwtFilter object.
 	 * Also specifies the Url patterns for registration bean.
 	 */
-	@Bean
-	public FilterRegistrationBean jwtFilter() {
-		FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
-		filterRegistrationBean.setFilter(new JwtFilter());
-		filterRegistrationBean.addUrlPatterns("/api/v1/*");
-		return filterRegistrationBean;
-	}
 
 	/*
 	 * Define the bean for WebMvcConfigurer. Create a new WebMvcConfigurerAdapter object 

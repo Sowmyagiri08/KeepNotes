@@ -16,14 +16,14 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="CategoryService" target="1.8" />
-      <module name="KeepNote-Step-6-Boilerplate" target="1.8" />
-      <module name="netflix-eureka-naming-server" target="1.8" />
-      <module name="netflix-zuul-api-gateway-server" target="1.8" />
-      <module name="NoteService" target="1.8" />
-      <module name="ReminderService" target="1.8" />
-      <module name="UserAuthentication-Service" target="1.8" />
-      <module name="UserService" target="1.8" />
+      <module name="CategoryService" target="11" />
+      <module name="KeepNote-Step-6-Boilerplate" target="11" />
+      <module name="netflix-eureka-naming-server" target="11" />
+      <module name="netflix-zuul-api-gateway-server" target="11" />
+      <module name="NoteService" target="11" />
+      <module name="ReminderService" target="11" />
+      <module name="UserAuthentication-Service" target="11" />
+      <module name="UserService" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 /*
  * Implement zuul logging filter by extending zuul filter
  */
-@Component
+//@Component
 public class ZuulLoggingFilter extends ZuulFilter {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());

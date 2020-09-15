@@ -23,8 +23,8 @@ import java.util.List;
  * @CrossOrigin, @EnableFeignClients and @RibbonClient needs to be added 
  */
 
-@EnableFeignClients
-@RibbonClient( name = "note")
+//@EnableFeignClients
+//@RibbonClient( name = "note")
 @CrossOrigin
 @RestController
 @RequestMapping("api/v1")

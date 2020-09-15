@@ -44,8 +44,6 @@ public class JwtFilter extends GenericFilterBean {
         } else {
             String jwtToken = authheader.substring(7);
             Claims claims = Jwts.parser().setSigningKey("secretkey").parseClaimsJws(jwtToken).getBody();
-            String userId = Jwts.parser().setSigningKey("secretkey").parseClaimsJws(jwtToken).getBody().getSubject();
-            httpServletRequest.setAttribute("userid", userId);
             chain.doFilter(request, response);
         }
     }

@@ -19,9 +19,10 @@ import com.stackroute.keepnote.jwtfilter.JwtFilter;
  * 
  */
 
-@SpringBootApplication
+
 @EnableAspectJAutoProxy
 @EnableDiscoveryClient
+@SpringBootApplication
 public class NoteServiceApplication {
 
 	/*
@@ -29,6 +30,19 @@ public class NoteServiceApplication {
 	 * object and use setFilter() method to set new instance of JwtFilter object.
 	 * Also specifies the Url patterns for registration bean.
 	 */
+
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/api/v1/*").allowedOrigins("http://localhost:4200/dashboard");
+			}
+		};
+	}
+
+
+
 	@Bean
 	public FilterRegistrationBean jwtFilter() {
 
@@ -43,15 +57,7 @@ public class NoteServiceApplication {
      * and add addCorsMappings(CorsRegistry registry) method to set addMapping and allowedOrigins
 	 */
 	
-	@Bean
-    public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/api/v1/note/*").allowedOrigins("http://localhost:9300");
-			}
-		};
-    }
+
 
 	/*
 	 * 

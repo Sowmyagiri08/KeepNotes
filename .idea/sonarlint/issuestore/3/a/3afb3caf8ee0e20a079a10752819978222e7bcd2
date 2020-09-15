@@ -1,0 +1,58 @@
+
+Q
+java:S3740~"/Provide the parametrized type for this generic.(‹ñï­úÿÿÿÿ8†Œ›ÕÈ.
+l
+java:S1192S"ODefine a constant instead of duplicating this literal "User not found" 3 times.(èª‡‰8†Œ›ÕÈ.
+U
+java:S14819"3Remove this unused "registeredUser" local variable.(—šÍ¹øÿÿÿÿ8ëÂ˜ÕÈ.
+Q
+java:S3740U"/Provide the parametrized type for this generic.(ÅàçÄúÿÿÿÿ8•¼™ÕÈ.
+R
+java:S3740‚"/Provide the parametrized type for this generic.(ÅàçÄúÿÿÿÿ8†Œ›ÕÈ.
+H
+java:S1452e"&Remove usage of generic wildcard type.(¹ÕÎöûÿÿÿÿ8é‘šÕÈ.
+d
+java:S1854P"BRemove this useless assignment to local variable "registeredUser".(Ü¤¸¯ıÿÿÿÿ8•¼™ÕÈ.
+d
+java:S18549"BRemove this useless assignment to local variable "registeredUser".(—šÍ¹øÿÿÿÿ8ëÂ˜ÕÈ.
+L
+java:S3740S"/Provide the parametrized type for this generic.(èª‡‰8•¼™ÕÈ.
+H
+java:S1481g"+Remove this unused "status" local variable.(­Çóõ8é‘šÕÈ.
+B
+java:S14527"&Remove usage of generic wildcard type.(ò³8ëÂ˜ÕÈ.
+\
+java:S46847"@Replace this persistent entity with a simple POJO or DTO object.(ò³8ëÂ˜ÕÈ.
+]
+java:S4684N"@Replace this persistent entity with a simple POJO or DTO object.(Ñı…Â8•¼™ÕÈ.
+U
+java:S1481P"3Remove this unused "registeredUser" local variable.(Ü¤¸¯ıÿÿÿÿ8•¼™ÕÈ.
+Q
+java:S3740:"/Provide the parametrized type for this generic.(×šÛğÿÿÿÿÿ8ëÂ˜ÕÈ.
+‰
+java:S1192>"gDefine a constant instead of duplicating this literal "Some Internal Error Try after sometime" 4 times.(ÅàçÄúÿÿÿÿ8é‘šÕÈ.
+W
+java:S1854g":Remove this useless assignment to local variable "status".(­Çóõ8é‘šÕÈ.
+L
+java:S3740j"/Provide the parametrized type for this generic.(èª‡‰8é‘šÕÈ.
+M
+java:S3740€"/Provide the parametrized type for this generic.(èª‡‰8†Œ›ÕÈ.
+K
+java:S3740%"/Provide the parametrized type for this generic.(“¹ì28Å—ÕÈ.
+V	java:S125x"<This block of commented-out lines of code should be removed.(™ü—áùÿÿÿÿ
+H
+java:S1452{"&Remove usage of generic wildcard type.(©ë”ßùÿÿÿÿ8†Œ›ÕÈ.
+Q
+java:S3740l"/Provide the parametrized type for this generic.(ÅàçÄúÿÿÿÿ8é‘šÕÈ.
+C
+java:S1452N"&Remove usage of generic wildcard type.(Ñı…Â8•¼™ÕÈ.
+Q
+java:S3740h"/Provide the parametrized type for this generic.(‘‘Ğ»úÿÿÿÿ8é‘šÕÈ.
+Q
+java:S3740>"/Provide the parametrized type for this generic.(ÅàçÄúÿÿÿÿ8ëÂ˜ÕÈ.
+O	java:S125b"<This block of commented-out lines of code should be removed.(è¢
+
+Q
+java:S3740<"/Provide the parametrized type for this generic.(ñÖŞøúÿÿÿÿ8ëÂ˜ÕÈ.
+Q
+java:S3740Q"/Provide the parametrized type for this generic.(‹ñï­úÿÿÿÿ8•¼™ÕÈ.

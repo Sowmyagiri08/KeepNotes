@@ -1,0 +1,11 @@
+
+[
+java:S3516'"9Refactor this method to not always return the same value.(¶û½Ñıÿÿÿÿ8æÎ¿ÕÈ.
+q
+java:S1192r"ODefine a constant instead of duplicating this literal "Note not found" 6 times.(şŒÎ³ÿÿÿÿÿ8½¢ËÕÈ.
+c
+java:S11265"AReplace this if-then-else statement by a single return statement.(Óúìøÿÿÿÿ8æÎ¿ÕÈ.
+f
+java:S25835"DChange this condition so that it does not always evaluate to "false"(Óúìøÿÿÿÿ8æÎ¿ÕÈ.
+I
+java:S1168™"+Return an empty collection instead of null.(¥¹ï8ôóÌÕÈ.

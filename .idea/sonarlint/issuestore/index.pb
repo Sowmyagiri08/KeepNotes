@@ -121,3 +121,9 @@ z
 JNoteService/src/main/java/com/stackroute/keepnote/jwtfilter/JwtFilter.java,6\2\6243070008ece3d8349b5286aeef7f5730f15c7a
 ö
 jUserAuthentication-Service/src/main/java/com/stackroute/keepnote/UserAuthenticationServiceApplication.java,c\0\c0acfdff80a95c234ad8c8830af50cb8a10849fb
+¶
+vUserAuthentication-Service/src/test/java/com/stackroute/keepnote/test/controller/UserAuthenticationControllerTest.java,e\6\e6297ee1cfe0cad56a56e5c669721c9c4d0bc136
+ß
+wnetflix-zuul-api-gateway-server/src/main/java/com/stackroute/keepnote/netflixzuulapigatewayserver/config/AppConfig.java,3\f\3f36559eaad1177c43d8ff289e9840a02ce708bc
+≤
+Ånetflix-zuul-api-gateway-server/src/main/java/com/stackroute/keepnote/netflixzuulapigatewayserver/filter/JWTValidationFilter.java,b\d\bde5fc71098a33fc198fffca9edc53a423495900

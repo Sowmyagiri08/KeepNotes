@@ -29,7 +29,7 @@ public class UserAuthenticationServiceApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/api/v1/auth/*").allowedOrigins("http://localhost:9100","http://localhost:4200");
+				registry.addMapping("/api/v1/auth/*").allowedOrigins("http://localhost:9100","http://localhost:4200","http://localhost:8080");
 			}
 		};
     }

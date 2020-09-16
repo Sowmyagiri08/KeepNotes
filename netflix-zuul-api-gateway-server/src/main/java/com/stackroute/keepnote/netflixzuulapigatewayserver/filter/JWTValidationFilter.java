@@ -25,14 +25,14 @@ public class JWTValidationFilter extends GenericFilterBean {
             filterChain.doFilter(servletRequest, servletResponse);
         } else {
             if (authHeader == null || !authHeader.startsWith("Bearer ")) {
-                throw new UnauthorizedException("Missing or invalid Authorization header");
+                response.sendError(HttpServletResponse.SC_UNAUTHORIZED,"Missing or invalid Authorization header");
             }
 
             String token = authHeader.substring(7);
             try {
                 Claims claims = Jwts.parser().setSigningKey("secretkey").parseClaimsJws(token).getBody();
             } catch (Exception e){
-                throw new UnauthorizedException("Missing or invalid Authorization header");
+                response.sendError(HttpServletResponse.SC_UNAUTHORIZED,"Missing or invalid Authorization header");
             }
             filterChain.doFilter(servletRequest, servletResponse);
 

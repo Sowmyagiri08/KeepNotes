@@ -25,6 +25,9 @@ export class NotesService {
       headers: new HttpHeaders().set('Authorization', `Bearer ${this.authService.getBearerToken()}`)
     }).subscribe((data) => {
       this.notes = data;
+      if(data==null){
+      this.notes=[];
+      }
       this.notesSubject.next(this.notes);
     },
     err=>{

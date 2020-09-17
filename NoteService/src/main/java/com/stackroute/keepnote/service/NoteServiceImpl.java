@@ -37,6 +37,8 @@ public class NoteServiceImpl implements NoteService {
      * This method should be used to save a new note.
      */
     public boolean createNote(Note note) {
+        UUID uuid = UUID.randomUUID();
+        note.setNoteId(uuid.hashCode());
         note.setNoteCreationDate(new Date());
         NoteUser newNoteUser = new NoteUser();
         newNoteUser.setUserId(note.getNoteCreatedBy());

@@ -14,6 +14,6 @@ export class Note {
     this.noteStatus = 'not-started';
     this.category = null;
     this.reminders = null;
-    this.noteCreatedBy = 'lavi';
+    this.noteCreatedBy = '';
   }
 }

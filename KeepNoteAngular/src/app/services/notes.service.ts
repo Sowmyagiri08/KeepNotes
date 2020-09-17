@@ -45,6 +45,9 @@ export class NotesService {
     return this.httpClient.post<Note>(this.url, note, {
       headers: new HttpHeaders().set('Authorization', `Bearer ${this.authService.getBearerToken()}`)
     }).pipe(tap(newNote => {
+      if(this.notes==null){
+      this.notes=[];
+      }
       this.notes.push(newNote);
       this.notesSubject.next(this.notes);
     }));
